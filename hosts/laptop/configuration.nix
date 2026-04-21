@@ -65,6 +65,7 @@
     packages = with pkgs; [
       discord
       firefox
+      rofi
     ];
   };
 
