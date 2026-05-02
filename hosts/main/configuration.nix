@@ -115,6 +115,7 @@
     git
     tree
     kitty
+    fastfetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
