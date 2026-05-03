@@ -97,6 +97,7 @@
       discord
       spotify
       obsidian
+      anki
     #  thunderbird
     ];
   };
