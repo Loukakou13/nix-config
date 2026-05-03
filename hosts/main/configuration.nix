@@ -148,15 +148,27 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enabled garbage collector to remove unused packages
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
 
+  # Optimising the space on the disk used by nixstore
   nix.optimise = {
     automatic = true;
     dates = [ "weekly" ];
   };
 
+  # Enabled system auto upgrades
+  system.autoUpgrade = {
+    enable = true;
+    flake = "/etc/nixos";
+    flags = [
+      "--print-build-logs"
+    ];
+    dates = "daily";
+    randomizedDelaySec = "45min";
+  };
 }
