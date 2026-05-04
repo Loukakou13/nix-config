@@ -6,7 +6,7 @@
 
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations= {
-      nixos = nixpkgs.lib.nixosSystem {
+      main = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [ ./hosts/main/configuration.nix ];

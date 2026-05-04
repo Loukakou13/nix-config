@@ -18,7 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35".device = "/dev/disk/by-uuid/fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35";
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "main"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.hosts = {
     "192.168.1.201" = ["homarr.loukawai.fr" "jellyfin.loukawai.fr" "sonarr.loukawai.fr" "radarr.loukawai.fr" "prowlarr.loukawai.fr" "qbittorrent.loukawai.fr"];
