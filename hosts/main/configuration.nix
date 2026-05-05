@@ -10,15 +10,12 @@
       ../../modules/network.nix
       ../../modules/plasma.nix
       ../../modules/fonts.nix
+      ../../modules/nvidia-gpu.nix
     ];
 
   boot.initrd.luks.devices."luks-fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35".device = "/dev/disk/by-uuid/fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35";
   networking.hostName = "main"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
