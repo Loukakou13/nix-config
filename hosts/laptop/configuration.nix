@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/locale.nix
       ../../modules/nix.nix
+      ../../modules/bluetooth.nix
     ];
 
   # Bootloader.
