@@ -7,14 +7,8 @@
       ../../modules/locale.nix
       ../../modules/nix.nix
       ../../modules/bluetooth.nix
+      ../../modules/boot.nix
     ];
-
-  # Bootloader.
-  boot.loader.systemd-boot = {
-    enable = true;
-    configurationLimit = 5;
-  };
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
