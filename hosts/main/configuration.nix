@@ -7,6 +7,7 @@
       ../../modules/locale.nix
       ../../modules/nix.nix
       ../../modules/boot.nix
+      ../../modules/network.nix
     ];
 
   # Bootloader.
@@ -19,17 +20,6 @@
   boot.initrd.luks.devices."luks-fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35".device = "/dev/disk/by-uuid/fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35";
   networking.hostName = "main"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.hosts = {
-    "192.168.1.201" = ["homarr.loukawai.fr" "jellyfin.loukawai.fr" "sonarr.loukawai.fr" "radarr.loukawai.fr" "prowlarr.loukawai.fr" "qbittorrent.loukawai.fr"];
-    "192.168.1.202" = ["argocd.loukawai.fr" "longhorn.loukawai.fr" "vault.loukawai.fr" "prometheus.loukawai.fr" "grafana.loukawai.fr"];
-  };
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
