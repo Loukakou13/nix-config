@@ -11,6 +11,7 @@
       ../../modules/network.nix
       ../../modules/intel-gpu.nix
       ../../modules/plasma.nix
+      ../../modules/fonts.nix
     ];
 
   networking.hostName = "laptop"; # Define your hostname.

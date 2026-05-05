@@ -9,6 +9,7 @@
       ../../modules/boot.nix
       ../../modules/network.nix
       ../../modules/plasma.nix
+      ../../modules/fonts.nix
     ];
 
   # Bootloader.
