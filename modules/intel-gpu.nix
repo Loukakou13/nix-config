@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   # GPU configurations for intel iris Xe
   services.xserver.videoDrivers = [ "modesetting" ];
 
