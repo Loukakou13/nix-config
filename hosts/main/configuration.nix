@@ -27,14 +27,6 @@
     isNormalUser = true;
     description = "Charon";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      discord
-      spotify
-      obsidian
-      anki
-    #  thunderbird
-    ];
   };
 
   # Install firefox.
