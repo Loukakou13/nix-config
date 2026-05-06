@@ -35,6 +35,7 @@
       anki
       xclip
       wl-clipboard
+      tmux
     #  thunderbird
     ];
   };
