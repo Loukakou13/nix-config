@@ -12,6 +12,7 @@
       ../../modules/fonts.nix
       ../../modules/nvidia-gpu.nix
       ../../modules/audio.nix
+      ../../modules/packages.nix
     ];
 
   boot.initrd.luks.devices."luks-fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35".device = "/dev/disk/by-uuid/fb9f8bcc-99ae-4ec7-ae30-d86a8b79fc35";
@@ -38,18 +39,6 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    tree
-    kitty
-    fastfetch
-    proton-vpn
-  ];
 
   programs.steam = {
     enable = true;
